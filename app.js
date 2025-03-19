@@ -8,6 +8,11 @@ const { main} = require("./connection");
 const app = express();
 
 
+app.get("/",(req,res)=>{
+
+res.send("run .....")    
+})
+
 app.use(morgan("dev"));
 app.use(bodyparser.urlencoded({ extended: true }))
 app.use(bodyparser.json())
