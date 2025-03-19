@@ -6,7 +6,7 @@ const {cloud_uplod,cloud_remove} =require("../cloud")
 const {upload} =require("../multerfunction")
 const path = require("path")
 const fs = require("fs");
-const { object } = require("joi");
+
 
 
 const router = express.Router()
@@ -79,6 +79,7 @@ router.post("/Create",async(req,res)=>{
        "password":req.body.password,
        "phone":req.body.phone,
        "brithdate":req.body.brithdate,
+       "bio":req.body.bio,
        "cover":{
         "url": null,
         "publicid": null,
@@ -410,5 +411,7 @@ router.delete("/:id",async(req,res)=>{
     }
 
 })
+
+
 
 module.exports = router;

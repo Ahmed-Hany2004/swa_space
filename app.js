@@ -17,7 +17,11 @@ app.use(cors())
 
 
 const userpath = require("./routes/user")
+const postpath = require("./routes/post")
+const commentpath = require("./routes/comment")
 
-app.use("/user",userpath)
+app.use("/user", userpath)
+app.use("/post", postpath)
+app.use("/comment", commentpath)
 
 main(app);
